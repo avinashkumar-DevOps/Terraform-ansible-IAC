@@ -134,3 +134,22 @@ vi  installnginx.yaml
 # Command to Run Playbook
 ansible-playbook installnginx.yaml
 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+For AWS Cloud 
+
+# Install micro to edit files inside docker container.
+# yaml for playbook
+---
+- name: Install Nginx on all servers
+  hosts: all
+
+  tasks:
+    - name: Ensure nginx is installed
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+
